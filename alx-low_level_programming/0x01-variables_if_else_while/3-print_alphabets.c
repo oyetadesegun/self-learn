@@ -10,4 +10,5 @@ int main(void)
 		putchar(i);
 	for ( i = 'A' ; i <= 'Z' ; i++)
 		putchar(i);
+	return (0);
 }
