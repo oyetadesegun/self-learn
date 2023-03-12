@@ -16,18 +16,24 @@ int main()
     {
         case '+':
             result = num1 + num2;
-        break;
+            break;
         case '-':
             result = num1 - num2;
-        break;
+            break;
         case '*':
             result = num1 * num2;
-        break;
+            break;
         case '/':
-            result = num1 / num2;
-        break;
+            if(num2 != 0)
+                result = num1 / num2;
+            else{
+                printf("You can not divide any number by Zero.\nResult = ");
+                result = 0;
+            }
+            
+            break;
         default:
-            printf("%c is not a valid", operator);
+            printf("%c is not a valid.\nResult = ", operator);
             result = 0;
         break;
     }
