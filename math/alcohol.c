@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 int main()
 {
@@ -29,22 +30,23 @@ int main()
     printf("\nEnter a letter grade:");
     while (getchar() != '\n');
     scanf("%c", &grade);
-    if(grade == 'A' || grade =='a'){
+    grade = toupper(grade);
+    if(grade == 'A'){
         printf("perfect!\n");
     }
-    else if(grade == 'B' || grade == 'b'){
+    else if(grade == 'B'){
         printf("You did good\n");
     } 
-    else if(grade == 'C' || grade == 'c'){
+    else if(grade == 'C'){
         printf("You did okay\n");
     }
-    else if(grade == 'D' || grade == 'd'){
+    else if(grade == 'D'){
         printf("Atleast it's not an F\n");
     }
-    else if(grade == 'E' || grade == 'e'){
+    else if(grade == 'E'){
         printf("Narrow escape\n");
     }
-    else if(grade == 'F' || grade == 'f'){
+    else if(grade == 'F'){
         printf("You Failed\n");
     }
     else{
@@ -61,10 +63,15 @@ int main()
     case 'C':
         printf("You did okay\n");
         break;
-    case: 'D':
+    case 'D':
         printf("Atleast it's not an F\n");
         break;
-    
+    case 'E':
+        printf("Narrow escape\n");
+        break;
+    case 'F':
+        printf("You Failed\n");
+        break;
     default:
         printf("Your grade is not correct");
         break;
