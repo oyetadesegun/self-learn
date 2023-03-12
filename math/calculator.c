@@ -29,7 +29,7 @@ int main()
             else{
                 printf("You can not divide any number by Zero.\nResult = ");
                 result = 0;
-            }
+            } 
             
             break;
         default:
