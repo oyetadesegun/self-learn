@@ -8,7 +8,7 @@ int main(){
 
     printf("\nIs the temperature in (C), (F) or (K)?:");
    // while(getchar() != '\n');
-    scanf("%c", &unit);
+    scanf( "%c", &unit);
     unit = toupper(unit);
     switch (unit)
     {
@@ -29,7 +29,7 @@ int main(){
         scanf("%f", &temp);
         if(temp >= 100){
           temp -= 100;
-        printf("\nThe temp in Celsius is: %.1fF\n", temp);
+        printf("\nThe temp in Celsius is: %.1fC\n", temp);
         break; 
         }
         else{
